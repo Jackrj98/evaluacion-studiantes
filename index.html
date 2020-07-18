@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+    <script language="javascript" type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+
+
+    <script src="js/crud.js"></script>
+    <script src="js/validar.js"></script>
+
+</html>
+
+</head>
+
+<body>
+
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Index</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#studentModal">Estudiante <span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--endnav-->
+
+    <div class="ftco-section">
+        <div class="container p-5">
+            <div class="row mx-auto">
+                <div class="col-8">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <input type="search" name="search" id="search" class="form-control"
+                                    placeholder="Ingrese los apellidos del estudiante" aria-label="Search">
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-success" id="btn-buscar"
+                                    name="btn-buscar">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--student-->
+            <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Estudiante</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="estudianteF">
+                                <div class="form-group">
+                                    <label for="exampleInputApellidos">Cedula</label>
+                                    <input type="text" class="form-control" id="cedula" name="cedula"
+                                        aria-describedby="cedulaHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputApellidos">Apellidos</label>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos"
+                                        aria-describedby="apellidosHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nombres</label>
+                                    <input type="text" class="form-control" id="nombres" name="nombres">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Materia</label>
+                                    <input type="text" class="form-control" id="materia" name="materia">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 1</label>
+                                    <input type="text" class="form-control" id="nota1" name="nota1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 2</label>
+                                    <input type="text" class="form-control" id="nota2" name="nota2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 3</label>
+                                    <input type="text" class="form-control" id="nota3" name="nota3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 4</label>
+                                    <input type="text" class="form-control" id="nota4" name="nota4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 5</label>
+                                    <input type="text" class="form-control" id="nota5" name="nota5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNombres">Nota 6</label>
+                                    <input type="text" class="form-control" id="nota6" name="nota6">
+                                </div>
+                                <input type="hidden" class="form-control" id="estudianteId">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end-student-->
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Cédula</th>
+                            <th scope="col">Apellidos y Nombres</th>
+                            <th scope="col">Materia</th>
+                            <th scope="col">N1</th>
+                            <th scope="col">N2</th>
+                            <th scope="col">N3</th>
+                            <th scope="col">N4</th>
+                            <th scope="col">N5</th>
+                            <th scope="col">N6</th>
+                            <th scope="col">Promedio</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
